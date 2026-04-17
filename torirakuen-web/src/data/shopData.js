@@ -53,34 +53,36 @@ export const SHOP_INFO = {
 };
 
 /* ---- ヒーロースライド ---- */
+const base = import.meta.env.BASE_URL;
+
 export const HERO_SLIDES = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80',
-    alt: '鳥楽苑 店内全景 - 広々とした洗練された空間',
+    image: `${base}images/hero1.jpg`,
+    alt: '鳥楽苑 炭火焼鳥居酒屋',
     caption: '備長炭の香り、ゆったりと流れる時間。',
     subcaption: '船橋駅北口 徒歩1分30秒',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1600&q=80',
-    alt: '備長炭で焼く本格焼鳥',
-    caption: '毎日丁寧に仕込む、本格備長炭焼鳥。',
-    subcaption: '1本 180円〜',
+    image: `${base}images/hero2.jpg`,
+    alt: '鳥楽苑 店内 - 落ち着いた大人の空間',
+    caption: '本格炭火焼鳥と、上質なひとときを。',
+    subcaption: 'ソファ席・テーブル席・カウンター席',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80',
-    alt: '鳥楽苑 宴会・貸切対応の広い店内',
-    caption: '最大50名様の貸切にも対応。',
-    subcaption: '100インチプロジェクター完備',
+    image: `${base}images/hero3.jpg`,
+    alt: '鳥楽苑 広々とした店内全景',
+    caption: '洗練された大人の空間で、特別なひとときを。',
+    subcaption: '最大50名様の貸切にも対応',
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1600&q=80',
-    alt: '鳥楽苑 ソファ席・くつろぎの空間',
-    caption: '洗練された大人の空間で、特別なひとときを。',
-    subcaption: 'ソファ席・テーブル席・カウンター席',
+    image: `${base}images/hero4.jpg`,
+    alt: '鳥楽苑 ゆったりとしたソファ席・テーブル席',
+    caption: '最大50名様の貸切にも対応。',
+    subcaption: '100インチプロジェクター完備',
   },
 ];
 
