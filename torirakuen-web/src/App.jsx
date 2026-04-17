@@ -9,7 +9,7 @@ import './styles/globals.css';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/torirakuen">
       <Layout>
         <Routes>
           <Route path="/"        element={<HomePage />} />
