@@ -16,7 +16,7 @@ export default function InfoSection() {
           <div className={styles.mapBox}>
             <iframe
               title="鳥楽苑 地図"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.4!2d139.9851!3d35.6985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188578b3aa42d1%3A0x1a7e0b8e8a!2z6MKm5qiq6aKo!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9563885686075!2d139.9866199!3d35.7026908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018810008c29551%3A0x19a7cc02c5ffec64!2z6bOl5qW96IuR!5e0!3m2!1sja!2sjp!4v1776407384239!5m2!1sja!2sjp"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
