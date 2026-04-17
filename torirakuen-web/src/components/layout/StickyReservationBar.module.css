@@ -1,0 +1,132 @@
+.bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  height: 58px;
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-dark);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: background-color var(--transition-base);
+}
+
+.item span {
+  line-height: 1;
+}
+
+.phone {
+  color: var(--color-text-on-dark);
+  border-right: 1px solid var(--color-border-dark);
+}
+
+.phone:hover {
+  background-color: rgba(184, 122, 69, 0.15);
+}
+
+.web {
+  color: var(--color-accent-gold);
+  background: none;
+}
+
+.web:hover {
+  background-color: rgba(201, 168, 76, 0.1);
+}
+
+/* ---- ドロワー ---- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 160;
+  backdrop-filter: blur(4px);
+}
+
+.drawer {
+  position: fixed;
+  bottom: 58px;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-dark);
+  border-radius: 16px 16px 0 0;
+  padding: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.drawerHandle {
+  width: 36px;
+  height: 4px;
+  background-color: var(--color-border-dark);
+  border-radius: 2px;
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.drawerTitle {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--color-text-on-dark-muted);
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.drawerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  color: #fff;
+}
+
+.tabelogBtn {
+  background-color: var(--color-tabelog);
+}
+
+.hotpepperBtn {
+  background-color: var(--color-hotpepper);
+}
+
+.drawerClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--color-text-on-dark-muted);
+  font-size: 13px;
+  padding: 8px;
+  background: none;
+}
+
+/* ---- スマホのみ表示 ---- */
+@media (max-width: 768px) {
+  .bar {
+    display: flex;
+  }
+}

@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(30, 26, 23, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-dark);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.scrolled {
+  background-color: rgba(30, 26, 23, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ---- ブランド ---- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoSymbol {
+  font-size: 22px;
+}
+
+.nameJa {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.12em;
+}
+
+.nameEn {
+  font-family: var(--font-latin);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.3em;
+  display: none;
+}
+
+/* ---- 右側 ---- */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.phone:hover {
+  color: var(--color-accent-gold);
+}
+
+.phoneNum {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.phoneSub {
+  font-size: 10px;
+  color: var(--color-text-on-dark-muted);
+  letter-spacing: 0.06em;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.ctaBtn:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.tabelogBtn {
+  background-color: var(--color-tabelog);
+  color: #fff;
+}
+
+.hotpepperBtn {
+  background-color: var(--color-hotpepper);
+  color: #fff;
+}
+
+/* ---- レスポンシブ ---- */
+@media (max-width: 1024px) {
+  .nameEn { display: none; }
+  .hotpepperBtn { display: none; }
+}
+
+@media (max-width: 768px) {
+  .inner { height: 56px; padding: 0 16px; }
+  .phone { display: none; }
+  .ctaBtn { padding: 8px 12px; font-size: 11px; }
+  .tabelogBtn { display: none; }
+  .hotpepperBtn { display: none; }
+}

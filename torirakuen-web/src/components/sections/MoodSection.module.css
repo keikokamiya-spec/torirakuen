@@ -1,0 +1,9 @@
+.section {
+  background-color: var(--color-bg-secondary);
+  padding: var(--section-padding);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}

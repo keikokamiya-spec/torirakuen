@@ -1,0 +1,179 @@
+.page {
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.pageHero {
+  background-color: var(--color-bg-dark);
+  text-align: center;
+  padding: 60px 24px 48px;
+}
+
+.heroEn {
+  font-family: var(--font-latin);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--color-accent-gold);
+  margin-bottom: 10px;
+}
+
+.heroJa {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 400;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.14em;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.seatGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.seatCard {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.seatImgBox {
+  height: 220px;
+  overflow: hidden;
+}
+
+.seatImgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.seatCard:hover .seatImgBox img {
+  transform: scale(1.04);
+}
+
+.seatBody {
+  padding: 24px;
+}
+
+.seatTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.seatDesc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ---- 貸切 ---- */
+.banquet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background-color: var(--color-bg-dark);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.banquetImg {
+  overflow: hidden;
+}
+
+.banquetImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.banquetBody {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.banquetEn {
+  font-family: var(--font-latin);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--color-accent-gold);
+}
+
+.banquetTitle {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.1em;
+}
+
+.banquetDesc {
+  font-size: 14px;
+  color: var(--color-text-on-dark-muted);
+  line-height: 2;
+}
+
+.banquetFeatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+}
+
+.banquetFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: rgba(245,242,236,0.8);
+}
+
+.banquetFeatures li svg {
+  color: var(--color-accent-gold);
+  flex-shrink: 0;
+}
+
+.banquetCta {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.banquetCta:hover {
+  background-color: var(--color-accent-hover);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .seatGrid { grid-template-columns: 1fr; }
+  .banquet { grid-template-columns: 1fr; }
+  .banquetImg img { min-height: 220px; }
+  .banquetBody { padding: 32px 24px; }
+  .banquetFeatures { grid-template-columns: 1fr; }
+}

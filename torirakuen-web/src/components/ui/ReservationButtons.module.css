@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.wrapper.column {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.phone {
+  background-color: var(--color-accent);
+  color: #fff;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 20px;
+}
+
+.sub {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.04em;
+}
+
+.tabelog {
+  background-color: var(--color-tabelog);
+  color: #fff;
+}
+
+.hotpepper {
+  background-color: var(--color-hotpepper);
+  color: #fff;
+}

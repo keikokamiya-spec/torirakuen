@@ -1,0 +1,186 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: var(--color-bg-dark);
+}
+
+/* ---- 背景画像 ---- */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.6s ease;
+}
+
+.bgImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 8s ease;
+}
+
+.bgImage:not(.transitioning) img {
+  transform: scale(1);
+}
+
+.bgImage.transitioning {
+  opacity: 0;
+}
+
+/* ---- オーバーレイ ---- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 16, 13, 0.35) 0%,
+    rgba(20, 16, 13, 0.15) 40%,
+    rgba(20, 16, 13, 0.55) 100%
+  );
+}
+
+/* ---- テキスト ---- */
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  gap: 16px;
+  transition: opacity 0.4s ease;
+}
+
+.content.transitioning {
+  opacity: 0;
+}
+
+.en {
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(245, 242, 236, 0.7);
+  text-transform: uppercase;
+}
+
+.caption {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 4vw, 48px);
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.subcaption {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 1.5vw, 15px);
+  color: rgba(245, 242, 236, 0.8);
+  letter-spacing: 0.12em;
+}
+
+.ctas {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.ctaBtn:hover {
+  opacity: 0.88;
+  transform: scale(1.03);
+}
+
+.primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.tabelog {
+  background-color: var(--color-tabelog);
+  color: #fff;
+}
+
+/* ---- インジケーター ---- */
+.indicators {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.dotActive {
+  background-color: #fff;
+  transform: scale(1.3);
+}
+
+/* ---- スクロールヒント ---- */
+.scrollHint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.7));
+}
+
+.scrollText {
+  font-family: var(--font-latin);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.6);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ---- レスポンシブ ---- */
+@media (max-width: 768px) {
+  .hero { height: 70vh; }
+  .ctas { flex-direction: column; align-items: center; }
+  .ctaBtn { width: 200px; }
+  .indicators { bottom: 60px; }
+}

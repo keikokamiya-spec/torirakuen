@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  /* ヘッダー(68px) + ナビ(44px) のオフセット */
+  padding-top: 112px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    /* スマホ: ヘッダー(56px) + ナビ(44px) */
+    padding-top: 100px;
+    /* スマホ固定バー(58px) のオフセット */
+    padding-bottom: 58px;
+  }
+}

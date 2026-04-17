@@ -1,0 +1,220 @@
+.page {
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+/* ---- ページヒーロー ---- */
+.pageHero {
+  background-color: var(--color-bg-dark);
+  text-align: center;
+  padding: 60px 24px 48px;
+}
+
+.heroEn {
+  font-family: var(--font-latin);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--color-accent-gold);
+  margin-bottom: 10px;
+}
+
+.heroJa {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 400;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.14em;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+/* ---- カードリスト ---- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 0;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.imgBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imgBox img {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+}
+
+.body {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: 0.06em;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metaTag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 2px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+  flex: 1;
+}
+
+.priceArea {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.priceNum {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.priceNote {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.ctaBtn:hover {
+  opacity: 0.85;
+  transform: scale(1.01);
+}
+
+.tabelogBtn { background-color: var(--color-tabelog); }
+.hotpepperBtn { background-color: var(--color-hotpepper); }
+
+/* ---- 注意事項 ---- */
+.notice {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+
+.noticeTitle {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  letter-spacing: 0.06em;
+}
+
+.noticeList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.noticeList li {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ---- レスポンシブ ---- */
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .imgBox img {
+    min-height: 220px;
+  }
+
+  .body {
+    padding: 24px 20px;
+  }
+}

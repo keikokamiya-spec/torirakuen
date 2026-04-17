@@ -1,0 +1,118 @@
+.section {
+  background-color: var(--color-bg-secondary);
+  padding: var(--section-padding);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.igIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.igHandle {
+  font-family: var(--font-latin);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+.igSub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.followBtn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.followBtn:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ---- グリッド ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.post {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-border);
+}
+
+.post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.post:hover img {
+  transform: scale(1.08);
+}
+
+.postOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 26, 23, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.post:hover .postOverlay {
+  opacity: 1;
+}
+
+/* ---- レスポンシブ ---- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .followBtn {
+    margin-left: 0;
+  }
+}
