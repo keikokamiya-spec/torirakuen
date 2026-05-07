@@ -21,7 +21,21 @@
     <title>鳥楽苑 | 船橋 本格備長炭焼鳥居酒屋</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="padding: 40px; font-family: sans-serif; text-align: center; color: #333;">
+        <h2 style="color: #d32f2f;">⚠️ Live Serverでは正しく表示されません</h2>
+        <p>現在、VS Codeの「Live Server」機能を使って開いているため、プログラムが解釈できずエラーになっています。</p>
+        <div style="margin: 20px auto; padding: 20px; background: #f5f5f5; border-radius: 8px; max-width: 600px; text-align: left;">
+          <h3 style="margin-top: 0;">✅ 正しいプレビュー手順：</h3>
+          <p>1. VS Codeの上のメニューから「ターミナル(Terminal)」→「新しいターミナル」を開きます。</p>
+          <p>2. 下に出た画面（ターミナル）に以下のコマンドを入力してEnterキーを押します：</p>
+          <code style="display: block; background: #222; color: #4af626; padding: 12px; border-radius: 4px; font-size: 16px; margin: 10px 0;">npm run dev</code>
+          <p>3. ターミナルに表示される青いリンク（ <b>http://localhost:5173</b> など）を<br><b>Ctrlキー (MacはCmdキー) を押しながらクリック</b> してください。</p>
+          <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;" />
+          <p style="font-size: 14px; color: #666;">※上記手順を行えば、この警告画面は消えて実際のサイトと画像が表示されます。</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
