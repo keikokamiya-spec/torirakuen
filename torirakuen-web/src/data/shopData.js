@@ -162,14 +162,14 @@ export const MOOD_ITEMS = [
   },
   {
     id: 3,
-    image: `${base}images/内観.jpg`,
+    image: `${base}images/naikan.jpg`,
     alt: '鳥楽苑 カウンター席',
     title: 'カウンター席',
     description: '4席のカウンター席。お一人でも気軽にお立ち寄りいただけます。炭火を間近に感じながらの食事は格別です。',
   },
   {
     id: 4,
-    image: `${base}images/内観2.jpg`,
+    image: `${base}images/naikan2.jpg`,
     alt: '鳥楽苑 宴会・貸切スペース',
     title: '貸切・宴会',
     description: '最大50名様まで対応。レイアウト変更可能で、会社の宴会・歓送迎会・各種パーティーに幅広くご利用いただけます。',

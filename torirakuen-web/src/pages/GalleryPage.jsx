@@ -9,11 +9,11 @@ const GALLERY_ITEMS = [
   { src: `${base}images/P046162569_480.jpg`, alt: '自家製エビマヨ', category: '料理' },
   { src: `${base}images/P047882147_480.jpg`, alt: 'テーブル席', category: '店内' },
   { src: `${base}images/P047882468_480.jpg`, alt: '焼鳥アップ', category: '料理' },
-  { src: `${base}images/内観2.jpg`, alt: '宴会スペース', category: '店内' },
+  { src: `${base}images/naikan2.jpg`, alt: '宴会スペース', category: '店内' },
   { src: `${base}images/P046162566_480.jpg`, alt: 'チキン南蛮', category: '料理' },
   { src: `${base}images/P048998033_238.jpg`, alt: 'ソファ席', category: '店内' },
   { src: `${base}images/P045800875_480.jpg`, alt: 'ごま団子', category: '料理' },
-  { src: `${base}images/内観.jpg`, alt: 'カウンター席', category: '店内' },
+  { src: `${base}images/naikan.jpg`, alt: 'カウンター席', category: '店内' },
   { src: `${base}images/P045800806_480.jpg`, alt: 'くつろぎ空間', category: '店内' },
   { src: `${base}images/P045800856_480.jpg`, alt: '貸切パーティー', category: '宴会' },
 ];
