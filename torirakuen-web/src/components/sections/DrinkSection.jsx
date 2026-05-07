@@ -23,7 +23,7 @@ export default function DrinkSection() {
         </div>
         <div className={`${styles.note} fade-in-up`}>
           <p>飲み放題コース（2〜3時間）でお得にお楽しみいただけます。</p>
-          <p>コースの詳細は<a href="#courses" className={styles.noteLink}>コースページ</a>をご確認ください。</p>
+          <p>コースの詳細は<button type="button" style={{background: 'none', border: 'none', padding: 0, font: 'inherit', cursor: 'pointer', textDecoration: 'underline'}} onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })} className={styles.noteLink}>コースページ</button>をご確認ください。</p>
         </div>
       </div>
     </section>

@@ -42,9 +42,12 @@ export default function HeroCarouselSection() {
         <h1 className={styles.caption}>{slide.caption}</h1>
         <p className={styles.subcaption}>{slide.subcaption}</p>
         <div className={styles.ctas}>
-          <a href="#courses" className={`${styles.ctaBtn} ${styles.primary}`}>
+          <button 
+            onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })} 
+            className={`${styles.ctaBtn} ${styles.primary}`}
+          >
             コースを見る
-          </a>
+          </button>
           <a
             href="https://tabelog.com/chiba/A1202/A120201/12061176/"
             target="_blank"

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
@@ -9,7 +9,7 @@ import './styles/globals.css';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/torirakuen">
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/"        element={<HomePage />} />
@@ -19,6 +19,6 @@ export default function App() {
           <Route path="/access"  element={<AccessPage />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
