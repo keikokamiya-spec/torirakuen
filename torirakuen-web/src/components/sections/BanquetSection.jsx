@@ -17,7 +17,7 @@ export default function BanquetSection() {
       {/* 背景画像 */}
       <div className={styles.bg}>
         <img
-          src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1600&q=80"
+          src={`${import.meta.env.BASE_URL}images/内観2.jpg`}
           alt="鳥楽苑 宴会・貸切対応の広い空間"
         />
         <div className={styles.overlay} />

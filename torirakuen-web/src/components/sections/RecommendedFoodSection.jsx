@@ -10,7 +10,7 @@ export default function RecommendedFoodSection() {
         <SectionHeader
           en="OUR FOOD"
           ja="おすすめ料理"
-          description="毎日昼から手差しで仕込む本格焼鳥。備長炭で丁寧に焼き上げた串焼きをはじめ、一番人気の自家製エビマヨなど多彩なメニューをご用意しています。"
+          description="毎日店舗で1本1本手差しし、備長炭で焼き上げる自慢の焼鳥。看板メニューの自家製エビマヨをはじめ、本格中華から居酒屋定番メニューまで幅広く取り揃えています。"
         />
         <div className="fade-in-up">
           <ImageCarousel items={FOOD_ITEMS} showThumbnails />

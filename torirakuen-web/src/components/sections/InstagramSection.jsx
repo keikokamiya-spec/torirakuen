@@ -2,14 +2,16 @@ import { FiInstagram } from 'react-icons/fi';
 import { SHOP_INFO } from '../../data/shopData';
 import styles from './InstagramSection.module.css';
 
+const base = import.meta.env.BASE_URL;
+
 // ダミーのInstagram投稿プレースホルダー（実装後はInstagram APIに差し替え）
 const IG_PLACEHOLDER = [
-  'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80',
-  'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&q=80',
-  'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80',
-  'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&q=80',
-  'https://images.unsplash.com/photo-1571197119738-be3b4f18f2d6?w=400&q=80',
-  'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&q=80',
+  `${base}images/P046162569_480.jpg`,
+  `${base}images/P045800866_480.jpg`,
+  `${base}images/P047882147_480.jpg`,
+  `${base}images/P046162582_480.jpg`,
+  `${base}images/P048998033_238.jpg`,
+  `${base}images/P045800874_480.jpg`,
 ];
 
 export default function InstagramSection() {

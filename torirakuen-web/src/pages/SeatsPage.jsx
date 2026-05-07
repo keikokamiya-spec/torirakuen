@@ -36,7 +36,7 @@ export default function SeatsPage() {
         <div className={`${styles.banquet} fade-in-up`}>
           <div className={styles.banquetImg}>
             <img
-              src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80"
+              src={`${import.meta.env.BASE_URL}images/内観2.jpg`}
               alt="貸切・宴会スペース"
             />
           </div>

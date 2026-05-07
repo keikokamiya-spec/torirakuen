@@ -9,7 +9,7 @@ export default function DrinkSection() {
         <SectionHeader
           en="DRINK"
           ja="ドリンク"
-          description="女性に嬉しいサワー・カクテルをはじめ、日本酒・焼酎・ワインなど40種類以上のドリンクを取り揃えています。"
+          description="女性にうれしいサワー・カクテルをはじめ、ハイボール、厳選の日本酒・焼酎、ワインなど40種類以上のドリンクを取り揃えています。"
           light
         />
         <div className={`${styles.grid} fade-in-up`}>
